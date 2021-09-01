@@ -563,7 +563,7 @@ body {
 }
 
 .ympic-box {
-  margin:5px; float: left; width:29%; height: 130px; background-color: #0056ff; line-height: 1.2;
+  margin:5px; float: left; width:30%; height: 130px; background-color: #0056ff; line-height: 1.2;
   border:2px solid #fff; border-radius: 10px; text-align: center; font-size: 12px; color:#ffffff; overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -572,7 +572,7 @@ body {
 }
 
 .ympic-box-a {
-  margin:5px; float: left; width:29%; height: 130px; background-color: #f68b1f; line-height: 1.2; 
+  margin:5px; float: left; width:30%; height: 130px; background-color: #f68b1f; line-height: 1.2; 
   border:2px solid #fff; border-radius: 10px; text-align: center; font-size: 12px; color:#ffffff; overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -580,7 +580,7 @@ body {
   background-color:#b6600a; cursor: pointer;
 }
 .ympic-box-b {
-  margin:5px; float: left; width:29%; height: 60px; background-color: #f68b1f; line-height: 1.2; 
+  margin:5px; float: left; width:30%; height: 60px; background-color: #f68b1f; line-height: 1.2; 
   border:2px solid #fff; border-radius: 10px; text-align: center; font-size: 12px; color:#ffffff; overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);padding-top:7px;
 }
@@ -588,7 +588,7 @@ body {
   background-color: #0056ff; cursor: pointer;
 }
 .ympic-box-c {
-  margin:5px; float: left; width:29%; height: 130px; background-color: #898f97; line-height: 1.2;
+  margin:5px; float: left; width:30%; height: 130px; background-color: #898f97; line-height: 1.2;
   border:2px solid #fff; border-radius: 10px; text-align: center; font-size: 12px; color:#ffffff; overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
