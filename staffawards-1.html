@@ -74,7 +74,7 @@
   </div>
   <div style="margin-top:-25px;background-color: #ffffff;height:40px;"></div>
 -->
-  <div class="ympic-topic" style="margin-top:70px;">รายงานผลการแข่งขันระดับพนักงาน (STAFF Awards)</div>
+  <div class="ympic-topic" style="margin-top:60px;">รายงานผลการแข่งขันระดับพนักงาน (STAFF Awards)</div>
   <div style="margin-top:-5px;font-size: 11px;color:#777;text-align: center;">คลิกเลือกดูรายงานการแข่งขัน</div>
   <div style="max-width:390px; width:90%; margin:10px auto;">
     <div class="ympic-box-d selectmenu"><img src="./img/icon-4.png" class="ympic-icon"><br>TOP 3<br>of the DAY<br>by Region</div>
@@ -83,43 +83,44 @@
     <div class="ympic-box-d" onclick="window.location.href='staffawards-4.html'"><img src="./img/icon-7.png" class="ympic-icon"><br>TOP Face Recognition<br>of the YEAR</div>
   </div>
   <div class="clr"></div>
+
+
+
   <div class="ympic-topic" style="color:#0056ff;">TOP 3 of the DAY by Region</div>
-
-
-  <div class="container">
-      <div class="col">
-        <!-- Default Design -->
-        <center>
-        <div class="dropdown-container" style="margin-top:10px; margin-bottom:15px;">
-          <div class="dropdown-toggle click-dropdown">
-            <div id="DisplayDate"></div>
-          </div>
-         <!--<div id="DisplayDate"></div>-->
-          <div class="dropdown-menu">
-              <div id="DisplayDropDown"></div>
-          </div>
+  <div id="loading" style="margin-top:30px;text-align: center;"><img src="./img/loading.gif"></div>
+  <div id="OpenData" class="container" style="display: none;">
+    <div class="col">
+      <center>
+      <div class="dropdown-container" style="margin-top:10px; margin-bottom:15px;">
+        <div class="dropdown-toggle click-dropdown">
+          <div id="DisplayDate"></div>
         </div>
-        </center>
+        <div class="dropdown-menu">
+          <div id="DisplayDropDown"></div>
+        </div>
       </div>
-  </div>
-  <div style="width:95%; margin:0 auto;">
+      </center>
+    </div>
+    <div style="width:98%; margin:0 auto;">
       <table id="example" class="display" style="width:100%;font-size: 11px;color:#444444;">
-          <thead>
-              <tr>
-                  <th>Rank</th>
-                  <th>Bank</th>
-                  <th>Branch Name</th>
-                  <th>Zone</th>
-                  <th>Region</th>
-                  <th style="text-align: center;">Score</th>
-              </tr>
-          </thead>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Bank</th>
+            <th>Branch Name</th>
+            <th>Zone</th>
+            <th>Region</th>
+            <th style="text-align: center;">Score</th>
+          </tr>
+        </thead>
       </table>
-  </div>
+    </div>
 
-  <div class="clr" style="height: 0px;"></div>
-  <center>
-    <div id="btn-1" class="btn-t1" onclick="window.location.href='digitalympic.html';">DigitalYmpic</div></center>
+    <div class="clr" style="height: 0px;"></div>
+    <center>
+      <div id="btn-1" class="btn-t1" onclick="window.location.href='digitalympic.html';">DigitalYmpic</div>
+    </center>
+  </div>
   <div class="clr" style="height: 40px;"></div>
 
 <script  src="./js/dropdown.js"></script>
