@@ -24,18 +24,20 @@
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="demo-bg">
 
 <div class="navbar1">
-  <center><div class="btn-t2" onclick="location.href='intro.html'">กลับไปหน้าแรก</div></center>
+  <center><div class="btn-t2" onclick="location.href='index.html'">กลับไปหน้าแรก</div></center>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
+      <!--
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage" onclick="location.href='intro.html'">Retail Society</a>
+  	  -->
+      <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'">Retail Society</a>
     </div>
     <!--
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -53,14 +55,30 @@
 
 
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <div style="margin:70px auto;">
+    <div style="margin:60px auto;">
       <div style="font-size: 16px; color:#000000; font-weight: 600;">ยินดีต้อนรับสู่ ...</div>
       <div><img src="./img/DigitalYmpic.png" class="ympic-logo"></div>
-      <div style="font-size: 14px; color:#000000; font-weight: 600;">เลือกประเภทการแข่งขัน</div>
+
+      <div style="font-size: 14px; color:#000000; font-weight: 600;">รู้จักกับ BBD DIGITALYMPIC 2021</div>
       <div style="max-width:390px; width:90%; margin:10px auto;">
-        <div class="ympic-box" onclick="window.location.href='staffawards.html'"><img src="./img/icon-7.png" class="ympic-icon"><br>ระดับพนักงาน<br>STAFF Awards</div>
-        <div class="ympic-box" onclick="window.location.href='bmawards.html'"><img src="./img/icon-2.png" class="ympic-icon"><br>ระดับสาขา<br>BM Awards</div>
-        <div class="ympic-box"><img src="./img/icon-3.png" class="ympic-icon"><br>ระดับเขต/ภาค<br>ZH/RH Awards</div>
+        <div class="ympic-box-e" onclick="window.location.href='aboutympic.html'">
+        	<div style="width:150px;float: left;text-align: center;">
+        		<img src="./img/notebook.png" style="width:104px;padding:5px;"></div>
+        	<div style="width:200px;float: left;padding-top:25px;">รู้จักกับ
+        		<div style="font-size: 20px;font-weight: 600;">BBD DIGITALYMPIC 2021</div>
+        		ให้มากยิ่งขึ้น ... คลิกเลย</div>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <!--
+        <div class="ympic-box"><img src="./img/icon-17.png" class="ympic-icon"><br>ผลิตภัณฑ์ที่ใช้<br>ในการแข่งขัน</div>
+        <div class="ympic-box"><img src="./img/icon-20.png" class="ympic-icon"><br>ข้อมูลเกี่ยวกับ<br>การแข่งขัน</div>
+		-->
+      <div style="margin-top:25px;font-size: 14px; color:#000000; font-weight: 600;">เลือกประเภทการแข่งขัน</div>
+      <div style="max-width:390px; width:90%; margin:10px auto;">
+        <div class="ympic-box" onclick="window.location.href='staffawards.html'"><img src="./img/icon-7.png" class="ympic-icon"><br>การแข่งขัน<br>ระดับพนักงาน<br>STAFF Awards</div>
+        <div class="ympic-box" onclick="window.location.href='bmawards.html'"><img src="./img/icon-2.png" class="ympic-icon"><br>การแข่งขัน<br>ระดับสาขา<br>BM Awards</div>
+        <div class="ympic-box" onclick="window.location.href='rhawards.html'"><img src="./img/icon-3.png" class="ympic-icon"><br>การแข่งขัน<br>ระดับเขต/ภาค<br>ZH/RH Awards</div>
       </div>
       <div class="clr"></div>
       <div style="margin-top:25px;font-size: 14px; color:#000000; font-weight: 600;">เลือกดูรายการผลการแข่งขัน</div>
@@ -70,26 +88,18 @@
         <div class="ympic-box-a" onclick="window.location.href='staffawards-3.html'"><img src="./img/icon-6.png" class="ympic-icon"><br>TOP of the YEAR</div>
         <div class="ympic-box-a"><img src="./img/icon-9.png" class="ympic-icon"><br>TOP Face Recognition<br>of the YEAR</div>
 
-
-        <div class="ympic-box-a"><img src="./img/icon-8.png" class="ympic-icon"><br>TOP Digital Transaction<br>BM of the YEAR</div>
-        <div class="ympic-box-a"><img src="./img/icon-12.png" class="ympic-icon"><br>TOP Digital KPI<br>BM of theYEAR</div>
-        <div class="ympic-box-a"><img src="./img/icon-10.png" class="ympic-icon"><br>TOP ZONE HEAD<br>of the YEAR</div>
-        <div class="ympic-box-a"><img src="./img/icon-11.png" class="ympic-icon"><br>TOP REGIONAL HEAD<br>of the YEAR</div>
-
-
+        <div class="ympic-box-a" onclick="window.location.href='bmawards-1.html'"><img src="./img/icon-8.png" class="ympic-icon"><br>TOP Digital Transaction<br>BM of the YEAR</div>
+        <div class="ympic-box-a" onclick="window.location.href='bmawards-2.html'"><img src="./img/icon-12.png" class="ympic-icon"><br>TOP Digital KPI<br>BM of theYEAR</div>
+        <div class="ympic-box-a" onclick="window.location.href='rhawards-1.html'"><img src="./img/icon-10.png" class="ympic-icon"><br>TOP ZONE HEAD<br>of the YEAR</div>
+        <div class="ympic-box-a" onclick="window.location.href='rhawards-1.html'"><img src="./img/icon-11.png" class="ympic-icon"><br>TOP REGIONAL HEAD<br>of the YEAR</div>
       </div>
       <div class="clr"></div>
-      <div style="margin-top:25px;font-size: 14px; color:#000000; font-weight: 600;">รู้จักกับ BBD DIGITALYMPIC 2021</div>
-      <div style="max-width:390px; width:90%; margin:10px auto;">
-        <div class="ympic-box"><img src="./img/icon-16.png" class="ympic-icon"><br>BBD<br>DIGITALYMPIC<br>2021 คืออะไร</div>
-        <div class="ympic-box"><img src="./img/icon-17.png" class="ympic-icon"><br>ผลิตภัณฑ์ที่ใช้<br>ในการแข่งขัน</div>
-        <div class="ympic-box"><img src="./img/icon-20.png" class="ympic-icon"><br>ข้อมูลเกี่ยวกับ<br>การแข่งขัน</div>
-      </div>
-      <div class="clr"></div>
-
     </div>
   </div>
+<center>
+<div style="margin-top:0px;font-size:10px;color:#555555;margin-bottom: 20px;font-weight: 700;">@LINE Retail Socitey</div>
+</center>
 
-
+<script src="./js/config.js?v=0001"></script>
 </body>
 </html>
