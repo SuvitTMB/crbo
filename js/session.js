@@ -1,9 +1,6 @@
   //sessionStorage.clear();
 
-  //https://obfuscator.io/
-
-
-  //var sStatusConfirm = 1;
+/*
   var sStatusPass = 0;
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
   var sLineName = "Website";
@@ -21,7 +18,7 @@
   sessionStorage.setItem("EmpID", sEmpID);
   sessionStorage.setItem("EmpName", sEmpName);
   sessionStorage.setItem("EmpBR", sEmpBr);
-
+*/
 
 
 
