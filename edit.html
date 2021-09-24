@@ -53,9 +53,11 @@
 		<div style="width:100%;"><input type="text" id="txtReportDate" class="input"></div>
 		<div style="width:100px;float: left;">DataJson</div>
 		<div style="width:100%;margin-top:2px;"><textarea class="textarea" id="txtDataJson"></textarea></div>
+		<div style="width:100px;float: left;">ประกาศผล</div>
+		<div style="width:100%;"><input type="text" id="txtImg" class="input"></div>
 		<div style="width:100px;float: left;">.</div>
 		<div style="width:100%;margin-top:2px;">
-			<button onclick="AddData(document.getElementById('txtGroupReport').value, document.getElementById('txtReportNo').value, document.getElementById('txtReportDate').value, document.getElementById('txtDataJson').value)">Save</button>
+			<button onclick="AddData(document.getElementById('txtGroupReport').value, document.getElementById('txtReportNo').value, document.getElementById('txtReportDate').value, document.getElementById('txtDataJson').value, document.getElementById('txtImg').value)">Save</button>
 		</div>	
 	</div>
 	<div class="clr"></div>
@@ -152,6 +154,7 @@ function UpdateData(doc) {
 	var t2 = document.createTextNode(' | No. ' + doc.data().ReportNo);
 	var t3 = document.createTextNode(' | ' + doc.data().ReportDate);
 	var t4 = document.createTextNode(doc.data().DataJson);
+	var t5 = document.createTextNode(doc.data().ReportImg);
 	node.appendChild(t1);
 	node.appendChild(t2);
 	node.appendChild(t3);
@@ -168,7 +171,7 @@ function UpdateData(doc) {
 	var b2 = document.createElement("BUTTON");
 	b2.innerHTML = "edit";
 	b2.addEventListener("click", function() {
-		EditData(doc.id,doc.data().GroupReport,doc.data().ReportNo,doc.data().ReportDate,doc.data().DataJson);
+		EditData(doc.id,doc.data().GroupReport,doc.data().ReportNo,doc.data().ReportDate,doc.data().DataJson,doc.data().ReportImg);
 	});
 	node.appendChild(b2);
 	
@@ -209,7 +212,8 @@ function ShowData(doc) {
 			doc.data().GroupReport,
 			doc.data().ReportNo,
 			doc.data().ReportDate,
-			doc.data().DataJson
+			doc.data().DataJson,
+			doc.data().ReportImg
 		);
 	});
 	node.appendChild(b2);
@@ -229,37 +233,41 @@ function RemoveData(id) {
 }
 
 
-function EditData(id,a1,a2,a3,a4) {
+function EditData(id,a1,a2,a3,a4,a5) {
 	Eid = id;
 	document.getElementById("txtGroupReport").value = a1;
 	document.getElementById("txtReportNo").value = a2;
 	document.getElementById("txtReportDate").value = a3;
 	document.getElementById("txtDataJson").value = a4;
+	document.getElementById("txtImg").value = a5;
     document.getElementById('FormAdd').style.display = 'block';
 }
 
 
-function AddData(a1,a2,a3,a4) {
+function AddData(a1,a2,a3,a4,a5) {
 	if(a1!="" && a2!="" && a3!="") {
 		if(Eid=="") {
 		  db.add({
 		    GroupReport : a1,
 		    ReportNo : parseInt(a2),
 		    ReportDate : a3,
-		    DataJson : a4
+		    DataJson : a4,
+		    ReportImg : a5
 		  });
 		} else {
 			db.doc(Eid).update({
 			    GroupReport : a1,
 			    ReportNo : parseInt(a2),
 			    ReportDate : a3,
-			    DataJson : a4			
+			    DataJson : a4,			
+		    	ReportImg : a5
 			});
 			Eid = "";
 			document.getElementById("txtGroupReport").value = "";
 			document.getElementById("txtReportNo").value = "";
 			document.getElementById("txtReportDate").value = "";
 			document.getElementById("txtDataJson").value = "";
+			document.getElementById("txtImg").value = "";
 			ReadData();
 			//alert("Save Done");
 		}
