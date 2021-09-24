@@ -39,7 +39,7 @@ function getData(x) {
     .where('ReportDate','==',x).get().then((snapshot)=> {
       snapshot.forEach(doc=> {
         //$("#DisplayDate").html('Report Date : '+doc.data().ReportDate);
-        $("#DisplayDate").html('ประจำวันที่ : '+doc.data().ReportDate);
+        $("#DisplayDate").html('ข้อมูล ณ วันที่ : '+doc.data().ReportDate);
         data = doc.data().DataJson;
         load();
       });
@@ -62,11 +62,14 @@ function load() {
         data: mydata,
         columns: [
             { data: "Rank", className: "txt-center" },
-            { data: "Bank", className: "txt-center" },
-            { data: "Branch Name" },
+            { data: "EmpName" },
+            { data: "Br" },
             { data: "Zone" },
             { data: "Region" },
-            { data: "Score", className: "txt-right" }
+            { data: "Uplift", className: "txt-right" },
+            { data: "Activation", className: "txt-right" },
+            { data: "Account", className: "txt-right" },
+            { data: "Transaction", className: "txt-right" }
         ],
         "bDestroy": true
     } );
@@ -105,7 +108,7 @@ function getDropDown(doc) {
         console.log(doc);
     myArray = JSON.parse(doc.data().DataJson);
     console.log(myArray);
-    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\")'><a href='#'>ประจำวันที่ "+ doc.data().ReportDate +"</a></li>";
+    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\")'><a href='#'>ข้อมูล ณ วันที่ "+ doc.data().ReportDate +"</a></li>";
     iii = iii+1;
 }
 
