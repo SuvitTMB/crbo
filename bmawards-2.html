@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">b
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/dropdown.css' rel="stylesheet" type="text/css">
+<!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+    <style type="text/css">
+        table.dataTable tbody th, table.dataTable tbody td {
+            padding: 2px 6px;
+        }
+        table.dataTable thead th, table.dataTable thead td {
+            background: #f68b1f; color: #ffffff; padding: 4px; margin-top:15px;
+        }
+        .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate { 
+            margin-bottom: 10px;
+        }
+        table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+          line-height: 1.4; vertical-align: top;
+        }
+        .txt-center { text-align: center; }
+        .txt-right { text-align: right; right: 10px; }
+        .a { width:10px; text-align: center;}
+        .b { height:10px; text-align: center;}
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--
+<div class="navbar1">
+  <center><div class="btn-t2" onclick="location.href='digitalympic.html'">กลับไปหน้าแรก</div></center>
+</div>
+-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <!--
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    -->
+      <a class="navbar-brand" href="#myPage" onclick="location.href='intro.html'">Retail Society</a>
+    </div>
+    <!--
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  -->
+  </div>
+</nav>
+<!--
+  <div class="bg-awards" style="background: url(./img/type1.jpg);width:100%;background-size: cover; background-position: center center">
+  </div>
+  <div style="margin-top:-25px;background-color: #ffffff;height:40px;"></div>
+-->
+  <div class="ympic-topic" style="margin-top:50px;">รายงานผลการแข่งขันระดับสาขา</div>
+  <div style="margin-top:-5px;font-size: 11px;color:#777;text-align: center;">คลิกเลือกดูรายงานการแข่งขัน</div>
+  <div style="max-width:390px; width:90%; margin:10px auto;">
+    <div class="ympic-box-c"><img src="./img/icon-2.png" class="ympic-icon"><br>ระดับสาขา<br>BM Awards</div>
+    <div class="ympic-box-a" onclick="window.location.href='bmawards-1.html'"><img src="./img/icon-8.png" class="ympic-icon"><br>TOP Digital Transaction<br>BM of the YEAR</div>
+    <div class="ympic-box-a selectmenu"><img src="./img/icon-12.png" class="ympic-icon"><br>TOP Digital<br>KPI BM<br>of theYEAR</div>
+  </div>
+  <div class="clr"></div>
+
+
+
+  <div class="ympic-topic" style="color:#0056ff;">TOP Digital KPI BM of the YEAR</div>
+  <div id="loading" style="margin-top:20px;text-align: center;"><img src="./img/loading.gif"></div>
+  <div id="OpenData" class="container" style="margin-top:0px;display: none;">
+    <div class="col">
+      <center>
+      <div class="dropdown-container" style="margin-top:10px; margin-bottom:15px;">
+        <div class="dropdown-toggle click-dropdown">
+          <div id="DisplayDate"></div>
+        </div>
+        <div class="dropdown-menu">
+          <div id="DisplayDropDown"></div>
+        </div>
+      </div>
+      </center>
+    </div>
+    <div style="width:98%; margin:0 auto;">
+      <table id="example" class="display" style="width:100%;font-size: 11px;color:#444444;">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>BR</th>
+            <th>Zone</th>
+            <th>Region</th>
+            <th style="text-align: center;">Uplift</th>
+            <th style="text-align: center;">Activation</th>
+            <th style="text-align: center;">Account</th>
+            <th style="text-align: center;">Transaction</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="clr" style="height: 0px;"></div>
+    <center>
+      <div id="btn-1" class="btn-t1" onclick="window.location.href='digitalympic.html';">DigitalYmpic</div>
+    </center>
+  </div>
+  <div class="clr" style="height: 40px;"></div>
+
+<script  src="./js/dropdown.js"></script>
+<script  src="./js/bmawards-2.js"></script>
+
+</body>
+</html>
