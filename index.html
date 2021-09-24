@@ -25,9 +25,7 @@
   <link href='css/app.css' rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!--
   <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
--->
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
 
@@ -150,7 +148,7 @@
       <div class="container" id="UserWaitting" style="display: none;background:#ffffff;margin-bottom: 50px;width:95%;border-radius: 15px;">
         <div class="section-title" data-aos="fade-up">
           <center>
-            <div class="btn-t2" onclick="ClickCheckLogin()">เช็คข้อมูลของคุณให้ถูกต้อง</div>
+            <div class="btn-t2" onclick="ClickCheckLogin()">อยู่ระหว่างตรวจสอบข้อมูล</div>
             <div style="padding-top:25px;color:#55555;"><font color="#ff0000"><b>
               ขณะนี้อยู่ในขั้นตอนการตรวจสอบข้อมูลการลงทะเบียนของคุณ<br>
               โปรดรอการตรวจข้อมูลสอบภายใน 24 ชั่วโมง</b></font><br><br>
@@ -166,7 +164,7 @@
       <div class="container" id="UserBlocked" style="display: none;background:#ffffff;margin-bottom: 50px;width:95%;border-radius: 15px;">
         <div class="section-title" data-aos="fade-up">
           <center>
-            <div class="btn-t3" onclick="ClickCheckLogin()">ตรวจสอบของคุณอีกครั้ง</div>
+            <div class="btn-t3" onclick="ClickCheckLogin()">กรุณาตรวจสอบข้อมูลอีกครั้ง</div>
             <div style="padding-top:25px;color:#55555;"><font color="#ff0000"><b>
               ข้อมูลของคุณไม่ถูกต้อง ระบบไม่อนุญาตให้เข้าใช้งาน<br>
               กรุณาติดต่อผ่านช่องทาง Email<br>เพื่อขอเปิดใช้งาน LINE Retail Society</b></font><br>
@@ -179,56 +177,7 @@
         </div>
       </div>
 
-<!--
-      <div id="TopQRcode" style="height: 30px;"></div>
-      <div class="container" id="ViewQRcode" style="display: none;background:#ffffff;margin-top:50px;margin-bottom: 50px;width:95%;border-radius: 15px;">
-        <div class="section-title" data-aos="fade-up">
-          <center>
-            <div style="font-size: 16px;font-weight: 600;color:#000;">บอกเพื่อนลงทะเบียน<br>สแกนเข้าร่วมงานได้ ... ที่นี่</div>
-            <div style="margin-top:20px;"><img src="./img/ScanMe.png"></div>
-          </center>
-          <div class="clr" style="height: 20px;"></div>
-          <center>
-            <a href="#myPage"><div class="btn-t1" onclick="CloseAgenda()">Close</div></a>
-          </center>
-          <div class="clr" style="height: 200px;"></div>
-        </div>
-      </div>
 
-
-      <div id="TopSurvey" style="height: 30px;"></div>
-      <div class="container" id="ViewSurvey" style="display: none;background:#ffffff;margin-top:50px;margin-bottom: 50px;width:95%;border-radius: 15px;">
-        <div class="section-title" data-aos="fade-up">
-          <center>
-            <div style="font-size: 16px;font-weight: 600;color:#000;">แบบประเมินผลการเข้าร่วมกิจกรรม<br>กรุณาตอบแบบสอบถาม<font color="#f68b1f">หลังจบงาน</font></div>
-            <div style="margin-top:20px;"><img src="./img/AllAward_Survey.png"></div>
-            <a href="https://forms.gle/CsSciGc3zDCeuE3V7" target="_blank" style="text-decoration: none;"><div class="btn-t2">คลิกที่นี่เพื่อตอบแบบสอบถาม<br>กรุณาตอบแบบสอนถามหลังงานจบ</div></a>
-          </center>
-          <div class="clr" style="height: 20px;"></div>
-          <center>
-            <a href="#myPage"><div class="btn-t1" onclick="CloseAgenda()">Close</div></a>
-          </center>
-          <div class="clr" style="height: 170px;"></div>
-        </div>
-      </div>
-
-      <div id="TopReward" style="height: 30px;"></div>
-      <div class="container" id="ViewReward" style="display: none;background:#ffffff;margin-bottom: 50px;width:95%;border-radius: 15px;margin-top:50px;">
-        <div class="section-title" data-aos="fade-up">
-          <center>
-            <div style="font-size: 16px;font-weight: 600;color:#000;">เตรียมลุ้นรางวัล Lucky Draw</div>
-            <div style="max-width: 380px;margin-top:20px;">
-              <img src="./img/photo1.jpg" style="width:100%;">
-            </div>
-          </center>
-          <div class="clr" style="height: 20px;"></div>
-          <center>
-            <a href="#myPage"><div class="btn-t1" onclick="CloseAgenda()">Close</div></a>
-          </center>
-          <div class="clr" style="height: 60px;"></div>
-        </div>
-      </div>
--->
     </section>
     <center>
     <div style="margin-top:30px;font-size:10px;color:#555555;margin-bottom: 20px;font-weight: 700;">@LINE Retail Socitey</div>
@@ -251,7 +200,7 @@
   //var sGroupReg = "Prudentital";
   var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
 
-/*
+
   async function main() {
     await liff.init({ liffId: "1655966947-8DgrpDq6" });
     document.getElementById("isLoggedIn").append(liff.isLoggedIn());
@@ -285,7 +234,7 @@
       external: true     
     })
   }
-*/
+
 
 //alert(sessionStorage.getItem("LineID"));
 document.getElementById("pictureUrl").src = sessionStorage.getItem("LinePicture");
