@@ -276,7 +276,7 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
   }
   //ReadData();
 
-
+  var sstatusconfirm = 1;
   function ReadData() {
     //alert("Get ID = "+sessionStorage.getItem("LineID"));
     //alert(alineID);
@@ -299,6 +299,8 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
         var ShowRegister = "เมื่อวันที่ : "+doc.data().RegisterDate;
         $("#RegisterDate").html(ShowRegister);
         Eid = doc.id;
+        sstatusconfirm = doc.data().statusconfirm;
+        alert("Status = "+doc.data().statusconfirm);
         aCheck = 1;
         //StatusConfirm 0 = ใหม่ , 1 = อนุมัติ , 2 = รออนุมัติ , 9 = ไม่อนุมัติ
         //alert(doc.data().statusconfirm);
@@ -392,6 +394,7 @@ function ClickSaveProfile() {
         empRH : a7,
         empAddress : a6,   
         memo : a8, 
+        statusconfirm : sstatusconfirm,  
         lastcheckin : dateString,
         RegisterDate : dateString
       });
