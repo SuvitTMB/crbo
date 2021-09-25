@@ -213,6 +213,7 @@
   main()
 
 
+
   async function getUserProfile() {
     const profile = await liff.getProfile();
     document.getElementById("pictureUrl").src = profile.pictureUrl;
@@ -277,6 +278,7 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
 
 
   function ReadData() {
+    alert("Get ID = "+sessionStorage.getItem("LineID"));
     //alert(alineID);
     db.where('lineID','==',sessionStorage.getItem("LineID"))
     .get().then((snapshot)=> {
@@ -302,6 +304,7 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
         //alert(doc.data().statusconfirm);
         if(doc.data().statusconfirm==1) {
           //อนุมัติ
+          sessionStorage.getItem("StatusPass") = doc.data().statusconfirm;
           document.getElementById('loading').style.display = 'none';
           document.getElementById('UserWaitting').style.display = 'none';
           document.getElementById('UserNoReg').style.display = 'block';
