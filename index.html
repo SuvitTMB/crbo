@@ -192,7 +192,7 @@
 <script src="./js/session.js?ver=0002"></script>
 
 <script type="text/javascript">
-
+  var sstatusconfirm = 1;
   var aCheck = 0;
   var Eid = "";
   //var aStatusConfirm = 0;
@@ -276,7 +276,6 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
   }
   //ReadData();
 
-  var sstatusconfirm = 1;
   function ReadData() {
     //alert("Get ID = "+sessionStorage.getItem("LineID"));
     //alert(alineID);
@@ -383,6 +382,7 @@ function ClickSaveProfile() {
     if(document.getElementById("memo").value!="") { var a8 = document.getElementById("memo").value; } else { var a8 = "";}
     NewDate();
     if(aCheck==1) {
+      alert("Save "+sstatusconfirm);
       db.doc(Eid).update({
         lineID : sessionStorage.getItem("LineID"),
         linename : sessionStorage.getItem("LineName"),
