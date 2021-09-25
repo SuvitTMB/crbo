@@ -160,6 +160,20 @@
       </div>
 
 
+      <div class="container" id="PleaseRegister" style="display: none;background:#ffffff;margin-bottom: 50px;width:95%;border-radius: 15px;">
+        <div class="section-title" data-aos="fade-up">
+          <center>
+            <div class="btn-t2" onclick="ClickCheckLogin()">กรุณาลงทะเบียนก่อนเริ่มใช้งาน</div>
+            <div style="padding-top:25px;color:#55555;"><font color="#ff0000"><b>
+              ขอให้ทำการลงทะเบียนเพื่อขอใช้งาน LINE Retail Society<br>
+              โปรดรอการตรวจข้อมูลสอบภายใน 24 ชั่วโมง</b></font><br><br>
+            *** ขอสงวนสิทธิ์การเข้าใช้งานเฉพาะชาว Retail เท่านั้น ***</div>
+
+          </center>
+          <div class="clr" style="height: 40px;"></div>
+        </div>
+      </div>
+
 
       <div class="container" id="UserBlocked" style="display: none;background:#ffffff;margin-bottom: 50px;width:95%;border-radius: 15px;">
         <div class="section-title" data-aos="fade-up">
@@ -310,14 +324,24 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
           document.getElementById('UserWaitting').style.display = 'none';
           document.getElementById('UserNoReg').style.display = 'block';
           document.getElementById('UserYesReg').style.display = 'none';
-        } else if(doc.data().statusconfirm==2 || doc.data().statusconfirm==0) {
+          document.getElementById('PleaseRegister').style.display = 'none';
+        } else if(doc.data().statusconfirm==2) {
           //รออนุมัติ
-          sstatusconfirm = 1;
           document.getElementById('loading').style.display = 'none';
           document.getElementById('UserWaitting').style.display = 'block';
           document.getElementById('UserNoReg').style.display = 'none';
           document.getElementById('UserYesReg').style.display = 'none';
           document.getElementById('UserBlocked').style.display = 'none';
+          document.getElementById('PleaseRegister').style.display = 'none';
+        } else if(doc.data().statusconfirm==0) {
+          //ขอเข้าใช้งาน
+          sstatusconfirm = 2;
+          document.getElementById('loading').style.display = 'none';
+          document.getElementById('UserWaitting').style.display = 'none';
+          document.getElementById('UserNoReg').style.display = 'none';
+          document.getElementById('UserYesReg').style.display = 'none';
+          document.getElementById('UserBlocked').style.display = 'none';
+          document.getElementById('PleaseRegister').style.display = 'block';
         } else if(doc.data().statusconfirm==9) {
           //ไม่อนุมัติ
           document.getElementById('loading').style.display = 'none';
@@ -325,12 +349,14 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
           document.getElementById('UserNoReg').style.display = 'none';
           document.getElementById('UserYesReg').style.display = 'none';
           document.getElementById('UserBlocked').style.display = 'block';
+          document.getElementById('PleaseRegister').style.display = 'none';
         } else {
           document.getElementById('loading').style.display = 'none';
           document.getElementById('UserWaitting').style.display = 'none';
           document.getElementById('UserNoReg').style.display = 'none';
           document.getElementById('UserYesReg').style.display = 'none';
           document.getElementById('UserBlocked').style.display = 'block';
+          document.getElementById('PleaseRegister').style.display = 'none';
         }
       });
       if(aCheck==0) {
@@ -339,6 +365,7 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
         document.getElementById('UserNoReg').style.display = 'none';
         document.getElementById('UserYesReg').style.display = 'block';
         document.getElementById('UserBlocked').style.display = 'none';
+        document.getElementById('PleaseRegister').style.display = 'none';
       }
     });
 
