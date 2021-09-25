@@ -21,8 +21,8 @@ function LastData() {
       snapshot.forEach(doc=> {
         sReportDate = doc.data().ReportDate;
         data = doc.data().DataJson;
-        //$("#DisplayDate").html('Report Date : '+sReportDate);
-        getData(sReportDate);
+        sReportImg = doc.data().ReportImg;
+        getData(sReportDate,doc.id);
         //getData(doc.id);
         //alert(sReportDate);
       });
@@ -31,15 +31,18 @@ function LastData() {
 
 
 
-function getData(x) {
-    //alert(x);
-    //db.where('doc.id','==',id).get().then((snapshot)=> {
-    db.where('GroupReport','==',sGroupReport)
-    .where('ReportDate','==',x).get().then((snapshot)=> {
+function getData(x,id) {
+    db.where(firebase.firestore.FieldPath.documentId(), "==", id)
+    .get().then((snapshot)=> {
       snapshot.forEach(doc=> {
         //$("#DisplayDate").html('Report Date : '+doc.data().ReportDate);
         $("#DisplayDate").html('ข้อมูล ณ วันที่ : '+doc.data().ReportDate);
         data = doc.data().DataJson;
+        if(doc.data().ReportImg!="") {
+            $("#DisplayReport").html('<div style="margin-top:15px;"><div style="padding:8px;color:#000;"><u>ประกาศรายชื่อผู้ได้รับรางวัลประจำวัน</u></div><div><img src="'+doc.data().ReportImg+'" style="width:100%; max-width: 370px;"></div></div>');
+        } else {
+            $("#DisplayReport").html('');
+        }
         load();
       });
     });
@@ -103,14 +106,15 @@ var iii = 0;
 var myArray = [];
 
 function getDropDown(doc) {
-        console.log(doc);
+    //console.log(doc);
     myArray = JSON.parse(doc.data().DataJson);
-    console.log(myArray);
-    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\")'><a href='#'>ข้อมูล ณ วันที่ "+ doc.data().ReportDate +"</a></li>";
+    //console.log(myArray);
+    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\",\""+ doc.id +"\")'><a href='#'>ประจำวันที่ "+ doc.data().ReportDate +"</a></li>";
     iii = iii+1;
 }
 
 
-function Linkweb(n) {
-    getData(n);
+function Linkweb(n,id) {
+    //alert("Check ID = "+id);
+    getData(n,id);
 }

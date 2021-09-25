@@ -1,3 +1,7 @@
+if(sessionStorage.getItem("StatusPass")!=1 && sessionStorage.getItem("LineID")==null) {
+  window.location.href = 'index.html';
+}
+
 // Get all the dropdown from document
 document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
 
