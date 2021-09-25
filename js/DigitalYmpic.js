@@ -32,32 +32,32 @@ function DigitalEmployee(x) {
     //alert(x);
     var str = "";
     if(x==1) {
-        str += '<div><img src="./img/BR-001@.jpg" style="width:100%;"></div>';
+        str += '<div><img src="./img/BR-001@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname1+'<div>';
         str += '<div>'+txttitle1+'</div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo1+'</div>';        
     } else if(x==2) {
-        str += '<div><img src="./img/BR-002@.jpg" style="width:100%;"></div>';
+        str += '<div><img src="./img/BR-002@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname2+'<div>';
         str += '<div>'+txttitle2+'</div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo2+'</div>';        
     } else if(x==3) {
-        str += '<div><img src="./img/BR-003@.jpg" style="width:100%px;"></div>';
+        str += '<div><img src="./img/BR-003@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname3+'<div>';
         str += '<div>'+txttitle3+'</div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo3+'</div>';        
     } else if(x==4) {
-        str += '<div><img src="./img/BR-004@.jpg" style="width:100%px;"></div>';
+        str += '<div><img src="./img/BR-004@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname4+'<div>';
         str += '<div>'+txttitle4+'</div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo4+'</div>';        
     } else if(x==5) {
-        str += '<div><img src="./img/BR-005@.jpg" style="width:100%px;"></div>';
+        str += '<div><img src="./img/BR-005@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname5+'<div>';
         str += '<div>'+txttitle5+'</div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo5+'</div>';        
     } else if(x==6) {
-        str += '<div><img src="./img/BR-006@.jpg" style="width:100%px;"></div>';
+        str += '<div><img src="./img/BR-006@.jpg" style="width:100%;max-width:280px;"></div>';
         str += '<div style="color:#0056ff;line-height:1.4;padding:10px 5px;">'+txtname6+'<div>';
         str += '<div style="padding:10px;color:#000000;text-align:left;line-height:1.4;">'+txtmemo6+'</div>';        
         str += '<div>'+txttitle61+'</div>';
