@@ -667,3 +667,6 @@ table.dataTable thead th, table.dataTable thead td {
 .txt-right { text-align: right; right: 10px; }
 .a { width:10px; text-align: center;}
 .b { height:10px; text-align: center;}
+.img-interview {
+  width:100%;max-width:285px; border-radius: 8px;
+}
