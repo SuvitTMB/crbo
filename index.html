@@ -310,8 +310,9 @@ document.getElementById("displayName1").append(sessionStorage.getItem("LineName"
           document.getElementById('UserWaitting').style.display = 'none';
           document.getElementById('UserNoReg').style.display = 'block';
           document.getElementById('UserYesReg').style.display = 'none';
-        } else if(doc.data().statusconfirm==2) {
+        } else if(doc.data().statusconfirm==2 || doc.data().statusconfirm==0) {
           //รออนุมัติ
+          sstatusconfirm = 1;
           document.getElementById('loading').style.display = 'none';
           document.getElementById('UserWaitting').style.display = 'block';
           document.getElementById('UserNoReg').style.display = 'none';
