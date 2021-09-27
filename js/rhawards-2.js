@@ -68,7 +68,7 @@ function load() {
             { data: "Uplift", className: "txt-right" },
             { data: "Activation", className: "txt-right" },
             { data: "Account", className: "txt-right" },
-            { data: "Transaction", className: "txt-right" }
+            { data: "Transaction", className: "txt-right" },
             { data: "UpScore", className: "txt-right txt-color" }
         ],
         "bDestroy": true
