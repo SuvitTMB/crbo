@@ -37,7 +37,7 @@
 /* Dropdown menu css */
 .dropdown-container {
   position: relative;
-  max-width: 240px;
+  max-width: 280px;
 }
 .dropdown-container .dropdown-toggle {
   color: #ffffff;
