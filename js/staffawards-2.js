@@ -37,7 +37,7 @@ function getData(x,id) {
     .get().then((snapshot)=> {
       snapshot.forEach(doc=> {
         //$("#DisplayDate").html('Report Date : '+doc.data().ReportDate);
-        $("#DisplayDate").html('ข้อมูล ณ วันที่ : '+doc.data().ReportDate);
+        $("#DisplayDate").html(''+doc.data().ReportDate);
         data = doc.data().DataJson;
         if(doc.data().ReportImg!="") {
             $("#DisplayReport").html('<div style="margin-top:15px;"><div style="padding:8px;color:#000;"><u>ประกาศรายชื่อผู้ได้รับรางวัลประจำวัน</u></div><div><img src="'+doc.data().ReportImg+'" style="width:100%; max-width: 370px;"></div></div>');
@@ -111,7 +111,7 @@ function getDropDown(doc) {
     //console.log(doc);
     myArray = JSON.parse(doc.data().DataJson);
     //console.log(myArray);
-    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\",\""+ doc.id +"\")'><a href='#'>ประจำวันที่ "+ doc.data().ReportDate +"</a></li>";
+    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\",\""+ doc.id +"\")'><a href='#'>"+ doc.data().ReportDate +"</a></li>";
     iii = iii+1;
 }
 
