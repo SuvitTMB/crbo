@@ -64,7 +64,7 @@ function load() {
         data: mydata,
         columns: [
             { data: "Rank", className: "txt-center" },
-            { data: "BMName" },
+            { data: "CodeBranch" },
             { data: "BR" },
             { data: "Zone" },
             { data: "Region" },
