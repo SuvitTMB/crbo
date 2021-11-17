@@ -105,14 +105,15 @@ var iii = 0;
 var myArray = [];
 
 function getDropDown(doc) {
-        console.log(doc);
+    //console.log(doc);
     myArray = JSON.parse(doc.data().DataJson);
     console.log(myArray);
-    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\")'><a href='#'>"+ doc.data().ReportDate +"</a></li>";
+    str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\",\""+ doc.id +"\")'><a href='#'>"+ doc.data().ReportDate +"</a></li>";
+    //str1 += "<li onclick='Linkweb(\""+ doc.data().ReportDate +"\")'><a href='#'>"+ doc.data().ReportDate +"</a></li>";
     iii = iii+1;
 }
 
 
-function Linkweb(n) {
-    getData(n);
+function Linkweb(n,id) {
+    getData(n,id);
 }
